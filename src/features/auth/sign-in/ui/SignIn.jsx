@@ -1,10 +1,15 @@
+import { Card } from "antd"
+import SignInForm from "./SignInForm"
+
+
 const SignIn = () => {
 
     return (
-      <div>
-        <h1>Sign In</h1>
-        <SignInForm />
-      </div>
+        <div style={{minHeight: '100vh', display: 'grid', placeItems: 'center', padding: 16}}>
+            <Card style={{width: 420}} title="Sign In">
+                <SignInForm />            
+            </Card>
+        </div>
     )
 }
 
