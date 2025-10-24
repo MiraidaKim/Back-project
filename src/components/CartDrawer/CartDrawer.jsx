@@ -14,6 +14,9 @@ export default function CartDrawer({open, onClose}) {
         }
     }
 
+
+    
+
     return (
         <Drawer title="Корзина" open={open} onClose={onClose} width={420}>
             {items.length === 0 ? (

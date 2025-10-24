@@ -1,7 +1,11 @@
 import { Card } from "antd";
 import SignUpForm from "./SignUpForm";
 
+
+
 const SignUp = () => {
+
+
   return (
     <div
       style={{
@@ -11,11 +15,20 @@ const SignUp = () => {
         padding: 16,
       }}
     >
+
+
       <Card style={{ width: 420 }} title="Регистрация">
         <SignUpForm />
       </Card>
+
+
     </div>
   );
 };
+
+
+
+
+
 
 export default SignUp;

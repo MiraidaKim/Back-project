@@ -8,11 +8,17 @@ import { ProductForm } from "../pages/ProductsPage/ui/ProductForm";
 import SignUp from "../features/auth/sign-up/ui/SignUp";
 
 
+
+
+
 export const router = createBrowserRouter([
     {
+
         path: "/",
         element: <ProtectedRoute />,
         children: [
+
+
             { index: true, element: <MainPage /> },
             { path: 'profile', element: <></>},
             { path: '/shop', element: <ProductsPage />},
@@ -20,6 +26,8 @@ export const router = createBrowserRouter([
             { path: '/admin/products/new', element: <ProductForm />},
             { path: '/admin/products/:id/edit', element: <ProductForm />}
         ]
+
+        
     },
     { path: 'signin', element: <SignIn />},
     { path: 'signup', element: <SignUp /> }

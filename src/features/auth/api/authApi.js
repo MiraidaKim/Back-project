@@ -5,10 +5,14 @@ export const authApi = {
         const { data } = await api.post(`/api/auth/register`, payload);
         return data
     },
+
+    
     login: async (payload) => {
         const { data } = await api.post(`/api/auth/login`, payload);
         return data; 
     },
+
+
     logout: async (refreshToken) => {
         try {
             await api.post(`/api/auth/logout`, { refreshToken });

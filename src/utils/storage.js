@@ -4,6 +4,8 @@ const LS_KEYS = {
     USER: 'authUser'
 }
 
+
+
 export const storage = {
     saveTokens: ({accessToken, refreshToken}) => {
         if (accessToken) localStorage.setItem(LS_KEYS.ACCESS, accessToken);
@@ -15,12 +17,18 @@ export const storage = {
     getAccess: () => localStorage.getItem(LS_KEYS.ACCESS),
     getRefresh: () => localStorage.getItem(LS_KEYS.REFRESH),
     getUser: () => {
+
+
+        
         try {
             return JSON.parse(localStorage.getItem(LS_KEYS.USER) || 'null');
         } catch {
             return null
         }
     },
+
+
+
     clearAll: () => {
         localStorage.removeItem(LS_KEYS.ACCESS);
         localStorage.removeItem(LS_KEYS.REFRESH);

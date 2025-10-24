@@ -6,11 +6,15 @@ import { productApi } from "../../../features/products/api/productApi";
 
 
 export function ProductDetails() {
+
+
     const { id } = useParams()
     const [p, setP] = useState(null)
     const [loading, setLoading] = useState(true)
     const { add } = useCartStore()
     const navigate = useNavigate()
+
+    
 
     useEffect(() => {
         (async () => {

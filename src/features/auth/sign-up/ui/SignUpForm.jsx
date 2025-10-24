@@ -2,10 +2,18 @@ import { Button, Form, Input, message } from "antd";
 import { useNavigate } from "react-router-dom";
 import { authApi } from "../../api/authApi";
 
+
+
+
+
 const SignUpForm = () => {
   const navigate = useNavigate();
 
+
+
   const onFinish = async (values) => {
+
+
     try {
       await authApi.register(values);
       message.success("Регистрация прошла успешно!");
@@ -14,6 +22,8 @@ const SignUpForm = () => {
       message.error(e?.response?.data?.message || "Ошибка при регистрации");
     }
   };
+
+
 
   return (
     <Form layout="vertical" autoComplete="off" onFinish={onFinish}>
@@ -58,5 +68,8 @@ const SignUpForm = () => {
     </Form>
   );
 };
+
+
+
 
 export default SignUpForm;

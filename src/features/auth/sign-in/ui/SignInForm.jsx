@@ -10,6 +10,7 @@ const SignInForm = () => {
     const { setSession } = useAuthStore()
 
     const onFinish = async (values) => {
+
         try {
             const res = await authApi.login(values);
             const { token, user } = res;
@@ -26,6 +27,8 @@ const SignInForm = () => {
     }
 
     return (
+
+        
         <Form layout="vertical" autoComplete="off" onFinish={onFinish}>
             <Form.Item label="Email" name={"email"} rules={[{ required: true, message: 'Введите email!' }, { type: 'email', message: 'Неккоректный email!'}]}>
                 <Input placeholder="you@example.com" />
